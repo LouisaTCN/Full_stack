@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+
+ <h1> MegaBytes Coffee Shop Reviews</h1>
+ <p>We welcome all feedback and would love to hear your reviews</p>
+
+ 
+<hr>
+<form action="/page6" method="post">
+    <p><input type="text" name="Name", placeholder="Please enter your name"></p>
+    <p><input type="text" name="Comment", placeholder="Please add your comments"></p>
+
+    <label for="rating">How was your experience with us?:</label>
+    <input type="radio" name="Rating" value="1"> 1
+    <input type="radio" name="Rating" value="2"> 2
+    <input type="radio" name="Rating" value="3"> 3
+    <input type="radio" name="Rating" value="4"> 4
+    <input type="radio" name="Rating" value="5"> 5
+
+    <p>Thank you for visiting MegaBytes Coffee Shop</p>
+</form>
+
+ {% endblock %}

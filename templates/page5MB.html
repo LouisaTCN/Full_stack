@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Welcome to MegaBytes Coffee Shop</h1>
+<p>Please see our menu below:</p>
+
+<h2>Drinks</h2>
+<ul>
+    {% for drink, price in drink_menu.items() %}
+    <li> {{drink}}: £{{ '%.2f'|format(price)}}</li>
+{% endfor %}
+ </ul>
+
+ <h2>Food</h2>
+ <ul>
+     {% for food, price in food_menu.items() %}
+     <li> {{food}}: £{{ '%.2f'|format(price)}}</li>
+ {% endfor %}
+  </ul>
+  {% endblock %}

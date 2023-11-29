@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+
+ <h1>Welcome to the 4th page of my Website</h1>
+ <p>Hello, these are my favourite songs</p>
+
+ <ul>
+    {% for song in fav_songs %}
+    <li> {{song}}</li>
+{% endfor %}
+ </ul>
+
+<hr>
+<form action="/page4" method="post">
+    <input type="text" name="add_song", placeholder="Enter your favourite song">
+    <button type>Submit favourite song</button>
+</form>
+
+ {% endblock %}
+
